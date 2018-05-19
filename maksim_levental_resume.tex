@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/makslevental/}{\Large Maksim Levental}} & Email : \href{mailto:}{maksim.levental@gmail.com}\\
+  \href{https://github.com/makslevental/}{https://github.com/makslevental/} & Mobile : +1.954.667.3666 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Florida}{Gainesville, FL}
+      {Master of Science in Computer Science;  GPA: 3.72}{Aug. 2013 -- Dec. 2015}
+    \resumeSubheading
+      {Florida State University}{Tallahassee, FL}
+      {Bachelor of Science in Mathematics;  GPA: 3.73}{Aug. 2007 -- Dec. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Preview Technology LLC}{Gainesville, FL}
+      {CTO}{July 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Devops}
+          {Managed deploy on AWS (RDS, EC2, EB, Lambda).}
+        \resumeItem{Backend}
+          {Built entire backend using Django, Docker, Postgres, Elasticsearch, Redis. Including user management, authentication, analytics, content management, and fiducial marker generation.}
+        \resumeItem{Frontend}
+          {Built mobile app and desktop dashboard using VueJS. Mobile app included social authenatication, augmented reality components, QR code recognition, profile management.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Databrary @ New York University Steinhardt}{New York, NY}
+      {Lead developer}{Jan. 2017 - July 2017}
+      \resumeItemListStart
+        \resumeItem{Devops}
+          {Managed deploy to Linode and dedicated (on premises) servers.}
+        \resumeItem{Backend}
+          {Ported to Go while maintainig legacy Haskell codebase. Including a fine-grained access control system with resource sharing, video manipulation, content feed, etc.}
+        \resumeItem{Frontend}
+          {Ported to React while maintainig legacy Angular1 codebase. Including registration, authentication, upload, sharing, etc. flows.}
+        \resumeItem{HPC}
+          {Maintained transcoding uploaded video files on NYU HPC.}
+        \resumeItem{Team}{Interviewed and hired frontend developer.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Thinknum}{New York, NY}
+      {Developer}{Sep. 2016 - Jan. 2017}
+      \resumeItemListStart
+        \resumeItem{Backend}
+          {Wrote and maintained scrapers for scraping "alternative data" for financial insights. Using Python and Django.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Florida}{Gainesville, FL}
+      {Research Assistant}{Aug. 2013 - Dec. 2015}
+      \resumeItemListStart
+        \resumeItem{Machine Learning}
+          {Research on machine learning for landmine detection. Modeling soil permittivity/dielectric changes as Gaussian process. Using MATLAB.}
+        \resumeItem{Backend}
+          {Extended landmine detection algorithm/testing/scoring framework to use Postgres (instead of flat file store).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Peace Corps}{Mbale, Uganda}
+      {Secondary school teacher}{Mar. 2011 - Mar. 2013}
+      \resumeItemListStart
+        \resumeItem{Math/Physics}
+          {Taught O level and A level math classes to rural school children. Ran study sessions for national exams.}
+        \resumeItem{IT}
+          {Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.}
+        \resumeItem{Girl's/Boy's camps}
+          {Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Little Language}
+      {Recursive descent parser for subset of Coffeescript. Written in Java.}
+    \resumeSubItem{Howdoesitfeeltobeafiction.org}
+      {Art project using email marketing to distribute critical theory. Uses Python and Javascript}
+    \resumeSubItem{Petri}
+      {Dial-in phonebook. Uses twilio, Flask, Postgres to provide users with a phonebook they can reach from anywhere.}
+  \resumeSubHeadingListEnd
+
+
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Python, Javascript, Go, Java, SQL, Rust}
+     \hfill
+     \textbf{Technologies}{: AWS, Vue, React, Django, Postgres}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
