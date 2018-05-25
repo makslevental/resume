@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1526672418 "/Users/max/dev_projects/resume/maksim_levental_resume.tex" "maksim_levental_resume.pdf" "maksim_levental_resume" 1526672419
-  "/Users/max/dev_projects/resume/maksim_levental_resume.tex" 1526672418 6467 865f55362acddfa68f4e37efd79db014 ""
+["pdflatex"] 1527268755 "/Users/max/dev_projects/resume/maksim_levental_resume.tex" "maksim_levental_resume.pdf" "maksim_levental_resume" 1527268756
+  "/Users/max/dev_projects/resume/maksim_levental_resume.tex" 1527268755 6495 2a40aa655cb4d6974d882773b83492a8 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -62,11 +62,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "maksim_levental_resume.aux" 1526672419 999 fd7551a5698f538081f6ae8b13940a5d ""
-  "maksim_levental_resume.out" 1526672419 185 05d6b1d306468e2d039d32998368af2c ""
-  "maksim_levental_resume.tex" 1526672418 6467 865f55362acddfa68f4e37efd79db014 ""
+  "maksim_levental_resume.aux" 1527268756 999 fd7551a5698f538081f6ae8b13940a5d ""
+  "maksim_levental_resume.out" 1527268756 185 05d6b1d306468e2d039d32998368af2c ""
+  "maksim_levental_resume.tex" 1527268755 6495 2a40aa655cb4d6974d882773b83492a8 ""
   (generated)
-  "maksim_levental_resume.out"
-  "maksim_levental_resume.log"
   "maksim_levental_resume.pdf"
   "maksim_levental_resume.aux"
+  "maksim_levental_resume.out"
+  "maksim_levental_resume.log"
