@@ -15,6 +15,7 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{ifthen}
 
 
 \pagestyle{fancy}
@@ -45,15 +46,20 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{#2 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[6]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} & #2
+      \ifthenelse{\equal{#3}{}}{}{
+        \\ \textit{\small#3} & \textit{\small #4}
+      } 
+      \ifthenelse{\equal{#5}{}}{}{
+        \\ \textit{\small Topic: #5} & \textit{\small GPA: #6}
+      }
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -84,98 +90,146 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Florida}{Gainesville, FL}
-      {Master of Science in Computer Science;  GPA: 3.72}{Aug. 2013 -- Dec. 2015}
-    \resumeSubheading
-      {Florida State University}{Tallahassee, FL}
-      {Bachelor of Science in Mathematics/Physics;  GPA: 3.73}{Aug. 2007 -- Dec. 2010}
-  \resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Preview Technology LLC}{Gainesville, FL}
-      {CTO}{July 2017 - June 2018}
-      \resumeItemListStart
-        \resumeItem{Devops}
-          {Built/owned all of deploy on AWS (RDS, EC2, EB, Lambda).}
-        \resumeItem{Backend}
-          {Built/owned entire backend using Django, Docker, Postgres, Elasticsearch, Redis. Including user management, authentication, analytics, content management, and fiducial marker generation.}
-        \resumeItem{Frontend}
-          {Built/owned mobile app and desktop dashboard using VueJS. Mobile app included social authenatication, augmented reality components, QR code recognition, profile management.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Databrary @ New York University Steinhardt}{New York, NY}
-      {Lead developer}{Jan. 2017 - July 2017}
-      \resumeItemListStart
-        \resumeItem{Devops}
-          {Managed deploy to Linode and dedicated (on premises) servers.}
-        \resumeItem{Backend}
-          {Ported to Go while maintaining legacy Haskell codebase. Including a fine-grained access control system with resource sharing, video manipulation, content feed, etc.}
-        \resumeItem{Frontend}
-          {Ported to React while maintaining legacy Angular1 codebase. Including registration, authentication, upload, sharing, etc.}
-        \resumeItem{HPC}
-          {Maintained transcoding uploaded video files on NYU HPC.}
-        \resumeItem{Team}{Interviewed and hired frontend developer.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Thinknum}{New York, NY}
-      {Developer}{Sep. 2016 - Jan. 2017}
-      \resumeItemListStart
-        \resumeItem{Backend}
-          {Wrote and maintained scrapers for scraping "alternative data" for financial insights. Using Python and Django.}
-      \resumeItemListEnd
-
+      {Doctorate in Computer Science}{Fall 2019 -- Expected Fall 2020}
+      {Reinforcement Learning for Super Resolution}{3.72}
     \resumeSubheading
       {University of Florida}{Gainesville, FL}
-      {Research Assistant}{Aug. 2013 - Dec. 2015}
-      \resumeItemListStart
-        \resumeItem{Machine Learning}
-          {Research on machine learning for landmine detection. Modeling soil permittivity/dielectric changes as Gaussian process. Using MATLAB.}
-        \resumeItem{Backend}
-          {Extended landmine detection algorithm/testing/scoring framework to use Postgres (instead of flat file store).}
-      \resumeItemListEnd
-
+      {Master of Science in Computer Science}{Fall 2013 -- Fall 2015}
+      {Databases for Buried Hazard Signature Metadata}{3.72}
     \resumeSubheading
-      {Peace Corps}{Mbale, Uganda}
-      {Secondary school teacher}{Mar. 2011 - Mar. 2013}
-      \resumeItemListStart
-        \resumeItem{Math/Physics}
-          {Taught O level and A level math classes to rural school children. Ran study sessions for national exams.}
-        \resumeItem{IT}
-          {Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.}
-        \resumeItem{Girl's/Boy's camps}
-          {Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.}
-      \resumeItemListEnd
+      {Florida State University}{Tallahassee, FL}
+      {Bachelor of Science in Mathematics/Physics}{Fall 2007 -- Fall 2010}
+      {Low-energy Hadronic Reactions}{3.73}
   \resumeSubHeadingListEnd
 
+\section{Academic Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Super Resolution for Automated Target Recognition}{\href{https://www.afcea.org/event/sites/default/files/files/CERDEC Army Industry Day Slides.pdf}{FON: W909MY-14-R-D010}}
+      {}{}{}{}
+      \resumeItemListStart
+        \item[] \small{
+          Super resolution is the process of producing high-resolution images from low-resolution images while preserving ground truth about the subject matter of the images and potentially inferring more such truth. 
+          We look towards super resolving images collected using longwave infrared cameras in an effort to improve target detection and classification. 
+          We investigate transfer learning using existing Deep Recurrent CNNs and propose a novel Reinforcement Learning system as well.
+        }
+      \resumeItemListEnd
+    \resumeSubheading
+      {A Deep Neural Network Model for Hazard Classification}{\href{https://doi.org/10.1117/12.2535681}{10.1117/12.2535681}}
+      {}{}{}{}
+      \resumeItemListStart
+        \item[] \small{ 
+          Buried hazard detection learning algorithms do not transfer effectively to diverse regions interrogated with differing sensors. We implement a novel training paradigm using \textit{region-based stratified cross-validation} that improves learning induction across disparate data sets. 
+          We test this training paradigm on a novel Deep Neural Network architecture. Furthermore, we discuss the relationship between loss and evaluation metrics.
+        }
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Industry Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Precision Silver LLC}{Gainesville, FL}
+      {Senior Software Engineer}{June 2018 -- August 2019}{}{}
+      \resumeItemListStart
+        \resumeItem{Embedded}
+          {: Built (from zero) soft-realtime RPi based system for collecting RGB and multi-spectral images at precise time/distance steps. Module was deployed on the DJI M600 platform in concert with Swift Piksi GPS module. This project involved serial communication with the Piksi and using PWM to actuate cameras and receive remote control signals.}
+        \resumeItem{Mobile}
+          {: Built (from zero) iOS application for planning and executing DJI M600 flights. This included porting and extending crop row/column swath calculations and integrating the DJI SDK. Completed many test and calibration flights. App is currently used by \(\sim\)10 industry plant science research groups.}
+        \resumeItem{ML}
+          {: Implemented \(k\)-nearest neighbors model to improve generation of vegetation mask for purposes of pixel level image segmentation.}
+        \resumeItem{Backend}
+          {: Merged plant metrics database schema with customer database schema (normalizing relations), Implemented ``phone home" system for remote upload stations.}
+        \resumeItem{Frontend}
+          {: Built several React components for user interface web app (displaying plot metrics). Refactored, extended, and created several QGIS plugins for use in vegetation mask creation and consequent image segmentation.}
+        \resumeItem{DevOps}
+          {: Implemented on premises CI (Concourse) that built iOS app, tested for regressions, and deployed backend code to Lambdas.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Preview Technology LLC}{Gainesville, FL}
+      {CTO}{July 2017 -- June 2018}{}{}
+      \resumeItemListStart
+        \resumeItem{Business}
+          {: Sales (inbound and outbound), account management (one large multinational and several small regional), fundraising (pitched to angel investors and raised \$220k).}
+        \resumeItem{Backend}
+          {: Built/owned entire backend using Django, Docker, Postgres, Elasticsearch, Redis. The backend Included user management, authentication, analytics, content management, and fiducial marker generation.}
+        \resumeItem{Frontend}
+          {: Built/owned mobile app and desktop dashboard using VueJS. The mobile app included social authentication, augmented reality components, QR code recognition, profile management.}
+        \resumeItem{DevOps}
+          {: Built/owned all of deploy on AWS (RDS, EC2, EB, Lambda).}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+  %   \resumeSubheading
+  %     {Databrary @ New York University Steinhardt}{New York, NY}
+  %     {Lead developer}{Jan. 2017 - July 2017}
+  %     \resumeItemListStart
+  %       \resumeItem{Devops}
+  %         {Managed deploy to Linode and dedicated (on premises) servers.}
+  %       \resumeItem{Backend}
+  %         {Ported to Go while maintaining legacy Haskell codebase. Including a fine-grained access control system with resource sharing, video manipulation, content feed, etc.}
+  %       \resumeItem{Frontend}
+  %         {Ported to React while maintaining legacy Angular1 codebase. Including registration, authentication, upload, sharing, etc.}
+  %       \resumeItem{HPC}
+  %         {Maintained transcoding uploaded video files on NYU HPC.}
+  %       \resumeItem{Team}{Interviewed and hired frontend developer.}
+  %     \resumeItemListEnd
+
+  %   \resumeSubheading
+  %     {Thinknum}{New York, NY}
+  %     {Developer}{Sep. 2016 - Jan. 2017}
+  %     \resumeItemListStart
+  %       \resumeItem{Backend}
+  %         {Wrote and maintained scrapers for scraping "alternative data" for financial insights. Using Python and Django.}
+  %     \resumeItemListEnd
+
+  %   \resumeSubheading
+  %     {University of Florida}{Gainesville, FL}
+  %     {Research Assistant}{Aug. 2013 - Dec. 2015}
+  %     \resumeItemListStart
+  %       \resumeItem{Machine Learning}
+  %         {Research on machine learning for landmine detection. Modeling soil permittivity/dielectric changes as Gaussian process. Using MATLAB.}
+  %       \resumeItem{Backend}
+  %         {Extended landmine detection algorithm/testing/scoring framework to use Postgres (instead of flat file store).}
+  %     \resumeItemListEnd
+
+  %   \resumeSubheading
+  %     {Peace Corps}{Mbale, Uganda}
+  %     {Secondary school teacher}{Mar. 2011 - Mar. 2013}
+  %     \resumeItemListStart
+  %       \resumeItem{Math/Physics}
+  %         {Taught O level and A level math classes to rural school children. Ran study sessions for national exams.}
+  %       \resumeItem{IT}
+  %         {Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.}
+  %       \resumeItem{Girl's/Boy's camps}
+  %         {Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.}
+  %     \resumeItemListEnd
+  % \resumeSubHeadingListEnd
+
+  Older projects/experience available upon request
 
 %-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Little Language}
-      {Recursive descent parser for subset of Coffeescript. Written in Java.}
-    \resumeSubItem{Howdoesitfeeltobeafiction.org}
-      {Art project using email marketing to distribute critical theory. Uses Python and Javascript}
-    \resumeSubItem{Petri}
-      {Dial-in phonebook. Uses Twilio, Flask, Postgres to provide users with a phonebook they can reach from anywhere.}
-  \resumeSubHeadingListEnd
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{Little Language}
+%       {Recursive descent parser for subset of Coffeescript. Written in Java.}
+%     \resumeSubItem{Howdoesitfeeltobeafiction.org}
+%       {Art project using email marketing to distribute critical theory. Uses Python and Javascript}
+%     \resumeSubItem{Petri}
+%       {Dial-in phonebook. Uses Twilio, Flask, Postgres to provide users with a phonebook they can reach from anywhere.}
+%   \resumeSubHeadingListEnd
 
 
 % --------PROGRAMMING SKILLS------------
-\section{Programming Skills}
+\section{Skills}
  \resumeSubHeadingListStart
-   \item{
-     \textbf{Languages}{: Python, Javascript, Go, Java, SQL, Rust}
-     \hfill
-     \textbf{Technologies}{: AWS, Vue, React, Django, Postgres}
-   }
+   \item \textbf{Programming Languages}
+   \subitem \labelitemii~ Expert: Python
+   \subitem \labelitemii~ Intermediate: Go, MATLAB, JavaScript, C\#, \LaTeX, Rust
+   \item \textbf{Technologies}{: PyTorch, TorchScript, AWS, CloudFormation, Vue, React, Django, PostgreSQL, QGIS, Docker, Git}
+   \item \textbf{Human Languages}{: English (native), Russian (native), Spanish (conversational)}
  \resumeSubHeadingListEnd
 
+\section{References}
+Available upon request
 
-%-------------------------------------------
 \end{document}
