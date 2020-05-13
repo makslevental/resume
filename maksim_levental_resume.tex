@@ -58,7 +58,10 @@
         \\ \textit{\small#3} & \textit{\small #4}
       } 
       \ifthenelse{\equal{#5}{}}{}{
-        \\ \textit{\small Topic: #5} & \textit{\small GPA: #6}
+        \\ \textit{\small Topic: #5}
+      }
+      \ifthenelse{\equal{#6}{}}{}{
+         & \textit{\small GPA: #6}
       }
     \end{tabular*}\vspace{-5pt}
 }
@@ -80,8 +83,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://github.com/makslevental/}{\Large Maksim Levental}} & Email : \href{mailto:}{maksim.levental@gmail.com}\\
-  \href{https://github.com/makslevental/}{https://github.com/makslevental/} & Mobile : +1.954.667.3666 \\
+  \textbf{\href{http://makslevental.github.io/}{\Large Maksim Levental}} & Email : \href{mailto:}{maksim.levental@gmail.com}\\
+  \href{http://makslevental.github.io/}{http://makslevental.github.io/} & Mobile : +1.954.667.3666 \\
 \end{tabular*}
 
 
@@ -89,9 +92,9 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Florida}{Gainesville, FL}
-      {Doctorate in Computer Science}{Fall 2019 -- Expected Fall 2020}
-      {Reinforcement Learning for Super Resolution}{3.72}
+      {University of Chicago}{Chicago, IL}
+      {Doctorate in Computer Science}{Fall 2020 -- Expected Fall 2022}
+      {Distributed HPC}{}
     \resumeSubheading
       {University of Florida}{Gainesville, FL}
       {Master of Science in Computer Science}{Fall 2013 -- Fall 2015}
