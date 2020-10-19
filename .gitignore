@@ -1,2 +1,6 @@
 # Archieve
 Archieve/
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.log
