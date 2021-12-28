@@ -1,256 +1,257 @@
-%-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
-%------------------------
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-\documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\documentclass[11pt,letterpaper,roman,colorlinks,linkcolor=blue]{moderncv}
+
+% modern themes
+\moderncvstyle{banking}  % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}     % color options 'blue' , 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\nopagenumbers{}
+
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{ifthen}
+\usepackage{hang}
+\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.5in]{geometry}
+\usepackage{import}
+\usepackage{xcolor}
 
+\setlist[itemize]{topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{1.5pt},after=\vspace{4pt}, label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=0.3in}
+\setlength{\hangingindent}{0.4in}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{#2 \vspace{-2pt}}
-  }
+\definecolor{defaultext}{RGB}{55, 65, 92}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
 }
+\makeatother
 
-\newcommand{\resumeSubheading}[6]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2
-      \ifthenelse{\equal{#3}{}}{}{
-        \\ \textit{\small#3} & \textit{\small #4}
-      } 
-      \ifthenelse{\equal{#5}{}}{}{
-        \\ \textit{\small Topic: #5}
-      }
-      \ifthenelse{\equal{#6}{}}{}{
-         & \textit{\small GPA: #6}
-      }
-    \end{tabular*}\vspace{-5pt}
-}
+\AtBeginDocument{\globalcolor{darkgray}}
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand*{\modern}{\fontfamily{qhv}\selectfont}
+\definecolor{mygrey}{RGB}{55, 65, 92} %{104, 104, 104}
+\newcommand{\mystyle}[1]{\textcolor{mygrey}{\modern #1}}
+\newcommand{\mytitlestyle}[1]{\huge\mystyle{#1}}
+\newcommand{\mysectionstyle}[1]{\large\mystyle{#1}}
 
-\renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+% personal data
+\name{\mytitlestyle{Maksim}}{\mytitlestyle{Levental}}
+% \address{415 Lovett Blvd. Houston, TX 77006}{}{}
+% \phone[mobile]{}
+% \email{}
+% \homepage{}
+% \extrainfo{}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 
 \begin{document}
+\makecvtitle
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://makslevental.github.io/}{\Large Maksim Levental}} & Email : \href{mailto:}{maksim.levental@gmail.com}\\
-  \href{http://makslevental.github.io/}{http://makslevental.github.io/} & Mobile : +1.954.667.3666 \\
-\end{tabular*}
+\vspace{-16mm}
+\begin{center}
+\mystyle{\href{maksim.levental@gmail.com}{\texttt{maksim.levental@gmail}} $|$ \href{https://makslevental.github.io/}{\texttt{makslevental.github.io}} $|$ \href{https://github.com/makslevental}{\texttt{github.com/makslevental}}}
+\end{center}
 
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Chicago}{Chicago, IL}
-      {Doctorate in Computer Science}{Fall 2020 -- Expected Fall 2023}
-      {Hardware/Software Co-design for Scientific HPC}{4.0}
-    \resumeSubheading
-      {University of Florida}{Gainesville, FL}
-      {Master of Science in Computer Science}{Fall 2013 -- Fall 2015}
-      {Databases for Buried Hazard Signature Metadata}{3.72}
-    \resumeSubheading
-      {Florida State University}{Tallahassee, FL}
-      {Bachelor of Science in Mathematics/Physics}{Fall 2007 -- Fall 2010}
-      {Low-energy Hadronic Reactions}{3.73}
-  \resumeSubHeadingListEnd
+\section{\mysectionstyle{INTERESTS}}
 
-\section{Academic Experience}
-  \resumeSubHeadingListStart
-      \resumeSubheading
-      {A Hardware Co-design Workflow for Scientific Instruments at the Edge}{\href{https://smc2021.ornl.gov/}{In preprint}}
-      {}{}{}{}
-      \resumeSubheading
-      {Ultrafast Focus Detection for Automated Microscopy}{In preprint}
-      {}{}{}{}
-    \resumeSubheading
-      {Steering of Flame Spray Pyrolysis Nanoparticle Synthesis}{\href{https://conferences.computer.org/scwpub/pdfs/XLOOP2020-78HhbO4BRAvWFG2azrH595/107200a035/107200a035.pdf}{10.1109/XLOOP51963.2020.00011}}
-      {}{}{}{}
-    \resumeSubheading
-      {Super Resolution for Automated Target Recognition}{\href{https://www.afcea.org/event/sites/default/files/files/CERDEC Army Industry Day Slides.pdf}{FON: W909MY-14-R-D010}}
-      {}{}{}{}
-    \resumeSubheading
-      {A Deep Neural Network Model for Hazard Classification}{\href{https://doi.org/10.1117/12.2535681}{10.1117/12.2535681}}
-      {}{}{}{}
-    \resumeSubHeadingListEnd
-%-----------EXPERIENCE-----------------
-\section{Industry Experience}
-  \resumeSubHeadingListStart
-      \resumeSubheading
-      {Facebook}{Menlo Park, CA}
-      {PhD Systems Research (PyTorch Graph \& Runtime)}{July 2021 -- }{}{}
-      \resumeItemListStart
-        \resumeItem{Compiler}
-          {: Study and prototype static and profile guided memory allocation optimization for NN Graphs (TorchScript and LazyTensor).}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Facebook}{Menlo Park, CA}
-      {PhD ML Intern (Groups Ranking)}{July 2020 -- October 2020}{}{}
-      \resumeItemListStart
-        \resumeItem{Experiment}
-          {: Studied the effect of repetition on Click Through Rate (CTR) and engagement for Groups You Should Join (GYSJ).}
-        \resumeItem{Backend}
-          {: Designed and implemented repetition reduction mechanisms for GYSJ.}
-        \resumeItem{ML}
-          {: Designed and implemented real-time features for ranking and bid optimization for GYSJ.}
-        \resumeItem{ML}
-          {: Implemented and tested features for SparseNN models that captured repetition history for clustered groups.}
-        \resumeItem{ML}
-          {: Ported Smart-scorer, for studying Heterogeneous Treatment Effects, to GYSJ use case.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Precision Silver LLC}{Gainesville, FL}
-      {Senior Software Engineer}{June 2018 -- August 2019}{}{}
-      \resumeItemListStart
-        \resumeItem{Embedded}
-          {: Built (from zero) soft-realtime RPi based system for collecting RGB and multi-spectral images at precise time/distance steps. Module was deployed on the DJI M600 platform in concert with Swift Piksi GPS module. This project involved serial communication with the Piksi and using PWM to actuate cameras and receive remote control signals.}
-        \resumeItem{Mobile}
-          {: Built (from zero) iOS application for planning and executing DJI M600 flights. This included porting and extending crop row/column swath calculations and integrating the DJI SDK. Completed many test and calibration flights. App is currently used by \(\sim\)10 industry plant science research groups.}
-        \resumeItem{ML}
-          {: Implemented \(k\)-nearest neighbors model to improve generation of vegetation mask for purposes of pixel level image segmentation.}
-        \resumeItem{Backend}
-          {: Merged plant metrics database schema with customer database schema (normalizing relations), Implemented ``phone home" system for remote upload stations.}
-        \resumeItem{Frontend}
-          {: Built several React components for user interface web app (displaying plot metrics). Refactored, extended, and created several QGIS plugins for use in vegetation mask creation and consequent image segmentation.}
-        \resumeItem{DevOps}
-          {: Implemented on premises CI (Concourse) that built iOS app, tested for regressions, and deployed backend code to Lambdas.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Preview Technology LLC}{Gainesville, FL}
-      {CTO}{July 2017 -- June 2018}{}{}
-      \resumeItemListStart
-        \resumeItem{Business}
-          {: Sales (inbound and outbound), account management (one large multinational and several small regional), fundraising (pitched to angel investors and raised \$220k).}
-        \resumeItem{Backend}
-          {: Built/owned entire backend using Django, Docker, Postgres, Elasticsearch, Redis. The backend included user management, authentication, analytics, content management, and fiducial marker generation.}
-        \resumeItem{Frontend}
-          {: Built/owned mobile app and desktop dashboard using VueJS. The mobile app included social authentication, augmented reality components, QR code recognition, profile management.}
-        \resumeItem{DevOps}
-          {: Built/owned all of deploy on AWS (RDS, EC2, EB, Lambda).}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
+Broadly, I'm interested in using, improving and designing application-specific hardware accelerators for Deep Neural Networks (DNNs), for science applications. 
+Specifically, using compiler techniques such as symbolic execution, and mathematical optimization techniques such as integer programming, to improve memory consumption and inference latencies of DNNs on GPUs and FPGAs. 
 
-  %   \resumeSubheading
-  %     {Databrary @ New York University Steinhardt}{New York, NY}
-  %     {Lead developer}{Jan. 2017 - July 2017}
-  %     \resumeItemListStart
-  %       \resumeItem{Devops}
-  %         {Managed deploy to Linode and dedicated (on premises) servers.}
-  %       \resumeItem{Backend}
-  %         {Ported to Go while maintaining legacy Haskell codebase. Including a fine-grained access control system with resource sharing, video manipulation, content feed, etc.}
-  %       \resumeItem{Frontend}
-  %         {Ported to React while maintaining legacy Angular1 codebase. Including registration, authentication, upload, sharing, etc.}
-  %       \resumeItem{HPC}
-  %         {Maintained transcoding uploaded video files on NYU HPC.}
-  %       \resumeItem{Team}{Interviewed and hired frontend developer.}
-  %     \resumeItemListEnd
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-  %   \resumeSubheading
-  %     {Thinknum}{New York, NY}
-  %     {Developer}{Sep. 2016 - Jan. 2017}
-  %     \resumeItemListStart
-  %       \resumeItem{Backend}
-  %         {Wrote and maintained scrapers for scraping "alternative data" for financial insights. Using Python and Django.}
-  %     \resumeItemListEnd
+\section{\mysectionstyle{EDUCATION}}
 
-  %   \resumeSubheading
-  %     {University of Florida}{Gainesville, FL}
-  %     {Research Assistant}{Aug. 2013 - Dec. 2015}
-  %     \resumeItemListStart
-  %       \resumeItem{Machine Learning}
-  %         {Research on machine learning for landmine detection. Modeling soil permittivity/dielectric changes as Gaussian process. Using MATLAB.}
-  %       \resumeItem{Backend}
-  %         {Extended landmine detection algorithm/testing/scoring framework to use Postgres (instead of flat file store).}
-  %     \resumeItemListEnd
+\textbf{Ph.D.}, \textbf{Computer Science}, \emph{University of Chicago}, GPA: 4.0
+\hfill \textbf{Oct. 2020 --- Present}
 
-  %   \resumeSubheading
-  %     {Peace Corps}{Mbale, Uganda}
-  %     {Secondary school teacher}{Mar. 2011 - Mar. 2013}
-  %     \resumeItemListStart
-  %       \resumeItem{Math/Physics}
-  %         {Taught O level and A level math classes to rural school children. Ran study sessions for national exams.}
-  %       \resumeItem{IT}
-  %         {Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.}
-  %       \resumeItem{Girl's/Boy's camps}
-  %         {Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.}
-  %     \resumeItemListEnd
-  % \resumeSubHeadingListEnd
+\textbf{M.S.}, \textbf{Computer Science}, \emph{University of Florida}, GPA: 3.7
+\hfill \textbf{Aug. 2014 --- Dec. 2015}
 
-  Older projects/experience available upon request
+\textbf{B.S.}, \textbf{Pure Math}, \textbf{Honors}, \emph{Florida State University}, GPA: 3.7
+\hfill \textbf{Aug. 2007 --- Dec. 2010}
 
-%-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{Little Language}
-%       {Recursive descent parser for subset of Coffeescript. Written in Java.}
-%     \resumeSubItem{Howdoesitfeeltobeafiction.org}
-%       {Art project using email marketing to distribute critical theory. Uses Python and Javascript}
-%     \resumeSubItem{Petri}
-%       {Dial-in phonebook. Uses Twilio, Flask, Postgres to provide users with a phonebook they can reach from anywhere.}
-%   \resumeSubHeadingListEnd
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\mysectionstyle{EXPERIENCE}}
+
+\textbf{Graduate Research Assistant}, Globus Labs, \emph{University of Chicago}
+\hfill \textbf{Oct. 2020 --- Present}
+\begin{itemize}
+\item Investigated a design workflow that allows exploring algorithmically complex hardware designs and developing reusable hardware libraries for the needs of scientific instruments at the edge. Specifically, investigated Chisel and other HDLs for designing DNNs and compression algorithms.
+\item Helped develop a workflow that connects the Data and Learning Hub for Science (DLHub), a repository for publishing AI models, with the Hardware-Accelerated Learning (HAL) cluster, using funcX as a universal distributed computing service. Specifically, deployed auto-encoder models for identifying binary black hole mergers in LIGO data.
+\item Developed a hybrid CPU-GPU Difference of Gaussians method for characterizing the volume distribution of unburnt nanoparticle synthesis solution, to enable near-real-time optimization and steering of Flame Spray Pyrolysis experiments.\end{itemize}
+
+\textbf{Research Intern}, PyTorch, \emph{Facebook}
+\hfill \textbf{June 2021 --- Present}
+\begin{itemize}
+\item Developed functionality for statically allocating memory for reduced inference latency in production and OSS PyTorch models.
+\item Developed symbolic analysis techniques for inferring memory requirements of intermediate tensors in dynamic neural networks. Specifically, used and extended shape analysis in TorchScript, combined with MIP formulation of storage allocation, to derive upper bounds on sizes of intermediate tensors.  
+\end{itemize}
+
+\textbf{Teaching Assistant}, Computer Science Department, \emph{University of Chicago}
+\hfill \textbf{Apr. 2021 --- June 2021}
+\begin{itemize}
+\item Assisted with grading, designed assignments, and hosted discussions for MPCS 52040 - Distributed Systems. Specifically, contributed example implementation of RAFT consensus in Rust.
+\end{itemize}
+
+\textbf{Ranking Engineer Intern}, Groups, \emph{Facebook}
+\hfill \textbf{June 2020 --- Sep. 2020}
+\begin{itemize}
+\item Investigated effects of repeated recommendations on conversion for Groups You Should Join (GYSJ). Specifically, developed and shipped pipelines and metrics for measuring repetition. 
+\item Developed features used in scoring recommendations, including collecting, cleaning, and transforming data.
+\item Ran A/B tests on 100MM population to measure efficacy of aforementioned features in reducing repetition and increasing conversion. Effects were marginal (i.e., not statistically significant).
+\end{itemize}
+
+\textbf{Graduate Research Assistant}, \emph{University of Florida}
+\hfill \textbf{Aug. 2014 --- Dec. 2015, Aug. 2018 --- Dec. 2019}
+\begin{itemize}
+\item Investigated classical and DNN Super Resolution techniques for improving object detection in Long Wave Infrared imagery. Specifically, improved detection AUC for very low-resolution targets by 5\% (using SRGAN).
+\item Developed a novel training paradigm using region-based stratified cross-validation that improved learning induction across disparate (in terms of geography) landmine data sets.
+\item Research on Gaussian Processes (GP) for landmine detection. Specifically, modeling soil permittivity/dielectric changes as GP.
+\item Implemented Postgres backend for landmine detection algorithm/testing/scoring framework (TUF).
+\end{itemize}
+
+\textbf{Peace Corps Education Volunteer}, \emph{Mbale, Uganda}
+\hfill \textbf{March 2011 --- March 2013}
+\begin{itemize}
+\item Taught O level and A level math classes to rural school children. Ran study sessions for national exams.
+\item Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.
+\item Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.
+\end{itemize}
 
 
-% --------PROGRAMMING SKILLS------------
-\section{Skills}
- \resumeSubHeadingListStart
-   \item \textbf{Programming Languages:}
-   \subitem \labelitemii~ Intermediate: Python
-   \subitem \labelitemii~ n00b: C++, Rust, CUDA
-   \item \textbf{Technologies:}{ PyTorch, TorchScript, AWS, CloudFormation, Vue, React, Django, PostgreSQL, QGIS, Docker, Git}
-   \item \textbf{Human Languages:}{ English (native), Russian (native)}
- \resumeSubHeadingListEnd
+%\textbf{Undergraduate Researcher},  Magnetic Relaxometry Research Lab, MD Anderson 
+%\hfill \textbf{Summer 2015}
+%%\vspace{-6pt}
+%\begin{itemize}
+%\item Developed and tested physical models to characterize the decay of ferromagnetic nanoparticles for ovarian cancer detection system
+%\end{itemize}
 
-\section{References}
-Available upon request
+%----------------------------------------------------------------------------------------
+%	Leadership
+%----------------------------------------------------------------------------------------
+ 
+%\section{\mysectionstyle{LEADERSHIP}}
+%
+%\textbf{Executive Member}, College of Natural Sciences Council, UT Austin 
+%\hfill \textbf{Jan. 2016---May 2020}
+%\begin{itemize}
+%\item Represented the academic interests of students in the College through writing and passing legislation.
+%\item Lead numerous data-driven projects to improve repsentation in the College.
+%\end{itemize}
+%
+%\textbf{Volunteer}, Kids Who Code, UT Austin 
+%\hfill \textbf{Aug. 2016---Feb. 2020}
+%\begin{itemize}
+%\item Volunteer weekly with 5th grade students at local Austin schools.
+%\item Expose students to problem solving and critical thinking skills through computer science.
+%\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+
+\section{\mysectionstyle{SKILLS}}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Formal Languages  & Python, C++, Rust, SQL, CUDA, Scala \\
+Human Languages  & English (native), Russian (native) \\
+Platforms  & LLVM, MLIR, PyTorch, TensorFlow, PostgreSQL \\
+Skills     & Deep Learning, Compilers, Hardware \\
+Coursework & \textit{Computer Science}: Quantum Computing, Deep Learning Systems, \\
+	   & $\qquad$ $\qquad$ $\qquad$ $\quad$ Analysis of Algorithms, Consensus and Economics, Automata \\
+           & \textit{Math}: Statistics, Numerical Linear Algebra, Optimization, Real Analysis, Topology, \\
+           & $\qquad$ \hspace{0.5ex} Algebra, PDEs  \\
+           & \textit{Physics}: Computational Physics, Electricity and Magnetism, Quantum Mechanics, \\ 
+           & $\qquad$ $\quad$ \hspace{0.1ex} Statistical Mechanics, Nuclear Physics, Waves and Optics
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\mysectionstyle{PUBLICATIONS}}
+
+\begin{hangingpar}
+\textbf{Levental M.}, Bao B., Chard K., Foster I.
+\textit{MemoMalloc: Memory Planning for Deep Neural Networks.} 
+Submitted to 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI '22).
+\end{hangingpar}
+
+\begin{hangingpar}
+Huerta E., Khan A., Huang X., Tian M., \textbf{Levental M.}, Chard R., Wei W., Heflin M., Katz D., Kindratenko V., Mu D., Blaiszik B., Foster I.
+\textit{Accelerated, scalable and reproducible AI-driven gravitational wave detection.} 
+Nature Astronomy volume 5, pages 1062–1068 (2021).
+\end{hangingpar}
+
+\begin{hangingpar}
+Yoshii K., Sankaran R., Strempfer S., \textbf{Levental M.}, Hammer M., Miceli A.
+\textit{A Hardware Co-design Workflow for Scientific Instruments at the Edge.} 
+Accepted to the Smoky Mountains Computational Sciences and Engineering Conference (SMC '21).
+\end{hangingpar}
+
+\begin{hangingpar}
+\textbf{Levental M.}, Chard R., Libera J. A., Chard K., Koripelly A., Elias J., Schwarting M., Blaiszik B., Stan M., Chaudhuri S., Foster I.
+\textit{Towards Online Steering of Flame Spray Pyrolysis Nanoparticle Synthesis.} 
+\textbf{Best Paper at 2020 IEEE/ACM 2nd Annual Workshop on Extreme-scale Experiment-in-the-Loop Computing (XLOOP '20)}.
+\end{hangingpar}
+
+\begin{hangingpar}
+Wilson J., Toska F., \textbf{Levental M.}, Dobbins P.
+\textit{A Deep Neural Network Model for Hazard Classification.}
+Artificial Intelligence and Machine Learning in Defense Applications (2019).
+\end{hangingpar}
+
+\section{\mysectionstyle{TECHNICAL REPORTS}}
+
+\begin{hangingpar}
+\textbf{Levental M.}
+\textit{Tensor Networks for Simulating Quantum Circuits on FPGAs.} 
+\href{https://arxiv.org/abs/2108.06831}{arXiv:2108.06831} (2021).
+\end{hangingpar}
+
+\begin{hangingpar}
+\textbf{Levental M.}, Orlova E.
+\textit{Comparing the Costs of Abstraction for DL Frameworks.} 
+\href{https://arxiv.org/abs/2012.07163}{arXiv:2012.07163} (2020).
+\end{hangingpar}
+
+%\begin{hangingpar}
+%Zhang, Z., Huang, Lei., \textbf{Pauloski, J. G.}, Foster, I. T. (2019, November).
+%\textit{FanStore: Enabling Efficient and Scalable I/O for Distributed Deep Learning.}
+%IEEE/ACM Third Workshop on Deep Learning on Supercomputers, Denver, Colorado.
+%\end{hangingpar}
+%
+%\begin{hangingpar}
+%\textbf{Pauloski, J. Gregory.} (2018, September).
+%\textit{Optimizing Deep Learning Methods for Image Segmentation with Distributed Training.}
+%Poster presented at the TACC Symposium for Texas Researchers, Austin, TX.
+%\end{hangingpar}
+%
+%\begin{hangingpar}
+%Gates, E., \textbf{Pauloski, J. G.}, Schellingerhout, D., Fuentes, D. (2018, September).
+%\textit{Glioma Segmentation and a Simple Accurate Model for Overall Survival Prediction.}
+%In International MICCAI Brainlesion Workshop (pp. 476-484). Springer, Cham.
+%\end{hangingpar}
+%
+%\begin{hangingpar}
+%\textbf{Pauloski, J. Gregory.} (2017, March). 
+%\textit{The Cultural Offensive Against ISIS.}
+%Received a UT Undergraduate Writing Award.
+%\end{hangingpar}
 
 \end{document}
