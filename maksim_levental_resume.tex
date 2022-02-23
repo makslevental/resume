@@ -64,7 +64,7 @@
 
 \section{\mysectionstyle{INTERESTS}}
 
-Broadly, I'm interested in using, improving and designing application-specific hardware accelerators for Deep Neural Networks (DNNs), for science applications. 
+I'm interested in using, improving, and designing application-specific hardware accelerators for Deep Neural Networks (DNNs), for science applications. 
 Specifically, using compiler techniques such as symbolic execution, and mathematical optimization techniques such as integer programming, to improve memory consumption and inference latencies of DNNs on GPUs, FPGAs, and ASICs. 
 
 %----------------------------------------------------------------------------------------
@@ -75,6 +75,9 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 
 \textbf{Ph.D.}, \textbf{Computer Science}, \emph{University of Chicago}, GPA: 4.0
 \hfill \textbf{Oct. 2020 --- Present}
+
+\textbf{M.S.}, \textbf{Computer Science}, \emph{University of Chicago}, GPA: 4.0
+\hfill \textbf{Aug. 2019 --- Feb. 2022}
 
 \textbf{M.S.}, \textbf{Computer Science}, \emph{University of Florida}, GPA: 3.7
 \hfill \textbf{Aug. 2014 --- Dec. 2015}
@@ -91,12 +94,13 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 \textbf{Graduate Research Assistant}, Globus Labs, \emph{University of Chicago}
 \hfill \textbf{Oct. 2020 --- Present}
 \begin{itemize}
+\item Building an end-to-end open-source flow from PyTorch to FPGA, using MLIR, LLVM, and Vitis HLS. Currently exploring affine loop transformations and AXIS interconnects.
 \item Investigated a design workflow that allows exploring algorithmically complex hardware designs and developing reusable hardware libraries for the needs of scientific instruments at the edge. Specifically, investigated Chisel and other HDLs for designing DNNs and compression algorithms.
 \item Helped develop a workflow that connects the Data and Learning Hub for Science (DLHub), a repository for publishing AI models, with the Hardware-Accelerated Learning (HAL) cluster, using funcX as a universal distributed computing service. Specifically, deployed Autoencoder models for identifying binary black hole mergers in LIGO data.
 \item Developed a hybrid CPU-GPU Difference of Gaussians method for characterizing the volume distribution of unburnt nanoparticle synthesis solution, to enable near-real-time optimization and steering of Flame Spray Pyrolysis experiments.\end{itemize}
 
-\textbf{Research Intern}, PyTorch, \emph{Facebook}
-\hfill \textbf{June 2021 --- Present}
+\textbf{Compiler Research Intern}, PyTorch, \emph{Facebook}
+\hfill \textbf{June 2021 --- Feb. 2022}
 \begin{itemize}
 \item Developed functionality for statically allocating memory for reduced inference latency in production and OSS PyTorch models.
 \item Developed symbolic analysis techniques for inferring memory requirements of intermediate tensors in dynamic neural networks. Specifically, used and extended shape analysis in TorchScript, combined with MIP formulation of storage allocation, to derive upper bounds on sizes of intermediate tensors.  
@@ -144,13 +148,13 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 Formal Languages  & Python, C++, Rust, SQL, CUDA, Scala \\
 Human Languages  & English (native), Russian (native) \\
 Platforms  & LLVM, MLIR, PyTorch, TensorFlow, PostgreSQL \\
-Skills     & Deep Learning, Compilers, Hardware \\
+Skills     & Deep Learning, Compilers, Hardware, Baking \\
 Coursework & \textit{Computer Science}: Quantum Computing, Deep Learning Systems, \\
 	   & $\qquad$ $\qquad$ $\qquad$ $\quad$ Analysis of Algorithms, Consensus and Economics, Automata \\
            & \textit{Math}: Statistics, Numerical Linear Algebra, Optimization, Real Analysis, Topology, \\
            & $\qquad$ \hspace{0.5ex} Algebra, PDEs  \\
            & \textit{Physics}: Computational Physics, Electricity and Magnetism, Quantum Mechanics, \\ 
-           & $\qquad$ $\quad$ \hspace{0.1ex} Statistical Mechanics, Nuclear Physics, Waves and Optics
+           & $\qquad$ $\quad$ \hspace{0.00ex} Statistical Mechanics, Nuclear Physics, Waves and Optics
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
@@ -159,32 +163,39 @@ Coursework & \textit{Computer Science}: Quantum Computing, Deep Learning Systems
 
 \section{\mysectionstyle{PUBLICATIONS}}
 
+
 \begin{hangingpar}
-\textbf{Levental M.}, Bao B., Chard K., Foster I.
+\textbf{Levental M.}, Chard R., Chard K., Foster I., Wildenberg G.,
+\textit{Ultrafast Focus Detection for Automated Microscopy} 
+\textbf{Submitted} to International Conference on Computational Science (ICCS '22).
+\end{hangingpar}
+
+\begin{hangingpar}
+\textbf{Levental M.}, Bao B., Chard K., Foster I.,
 \textit{MemoMalloc: Memory Planning for Deep Neural Networks.} 
-Submitted to 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI '22).
+\textbf{Submitted} to 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI '22).
 \end{hangingpar}
 
 \begin{hangingpar}
-Huerta E., Khan A., Huang X., Tian M., \textbf{Levental M.}, Chard R., Wei W., Heflin M., Katz D., Kindratenko V., Mu D., Blaiszik B., Foster I.
+Huerta E., Khan A., Huang X., Tian M., \textbf{Levental M.}, Chard R., Wei W., Heflin M., Katz D., Kindratenko V., Mu D., Blaiszik B., Foster I.,
 \textit{Accelerated, Scalable and Reproducible AI-driven Gravitational Wave Detection.} 
-Nature Astronomy volume 5, pages 1062–1068 (2021).
+Nature Astronomy volume 5, pages 1062-1068 (2021).
 \end{hangingpar}
 
 \begin{hangingpar}
-Yoshii K., Sankaran R., Strempfer S., \textbf{Levental M.}, Hammer M., Miceli A.
+Yoshii K., Sankaran R., Strempfer S., \textbf{Levental M.}, Hammer M., Miceli A.,
 \textit{A Hardware Co-design Workflow for Scientific Instruments at the Edge.} 
 Accepted to the Smoky Mountains Computational Sciences and Engineering Conference (SMC '21).
 \end{hangingpar}
 
 \begin{hangingpar}
-\textbf{Levental M.}, Chard R., Libera J. A., Chard K., Koripelly A., Elias J., Schwarting M., Blaiszik B., Stan M., Chaudhuri S., Foster I.
+\textbf{Levental M.}, Chard R., Libera J. A., Chard K., Koripelly A., Elias J., Schwarting M., Blaiszik B., Stan M., Chaudhuri S., Foster I.,
 \textit{Towards Online Steering of Flame Spray Pyrolysis Nanoparticle Synthesis.} 
 \textbf{Best Paper at 2020 IEEE/ACM 2nd Annual Workshop on Extreme-scale Experiment-in-the-Loop Computing (XLOOP '20)}.
 \end{hangingpar}
 
 \begin{hangingpar}
-Wilson J., Toska F., \textbf{Levental M.}, Dobbins P.
+Wilson J., Toska F., \textbf{Levental M.}, Dobbins P.,
 \textit{A Deep Neural Network Model for Hazard Classification.}
 Artificial Intelligence and Machine Learning in Defense Applications (2019).
 \end{hangingpar}
@@ -192,7 +203,13 @@ Artificial Intelligence and Machine Learning in Defense Applications (2019).
 \section{\mysectionstyle{TECHNICAL REPORTS}}
 
 \begin{hangingpar}
-\textbf{Levental M.}
+\textbf{Levental M.},
+\textit{MS Thesis: Memory Planning for Deep Neural Networks} 
+\href{https://arxiv.org/submit/4178464/view}{arXiv:4178464} (2022).
+\end{hangingpar}
+
+\begin{hangingpar}
+\textbf{Levental M.},
 \textit{Tensor Networks for Simulating Quantum Circuits on FPGAs.} 
 \href{https://arxiv.org/abs/2108.06831}{arXiv:2108.06831} (2021).
 \end{hangingpar}
