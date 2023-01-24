@@ -94,10 +94,26 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 \textbf{Graduate Research Assistant}, Globus Labs, \emph{University of Chicago}
 \hfill \textbf{Oct. 2020 --- Present}
 \begin{itemize}
-\item Building an end-to-end open-source flow from PyTorch to FPGA, using MLIR, LLVM, and Vitis HLS. Currently exploring affine loop transformations and AXIS interconnects.
+\item Building an end-to-end open-source flow from PyTorch to FPGA, using MLIR, LLVM, and Vitis HLS. Currently exploring affine loop transformations.
 \item Investigated a design workflow that allows exploring algorithmically complex hardware designs and developing reusable hardware libraries for the needs of scientific instruments at the edge. Specifically, investigated Chisel and other HDLs for designing DNNs and compression algorithms.
 \item Helped develop a workflow that connects the Data and Learning Hub for Science (DLHub), a repository for publishing AI models, with the Hardware-Accelerated Learning (HAL) cluster, using funcX as a universal distributed computing service. Specifically, deployed Autoencoder models for identifying binary black hole mergers in LIGO data.
 \item Developed a hybrid CPU-GPU Difference of Gaussians method for characterizing the volume distribution of unburnt nanoparticle synthesis solution, to enable near-real-time optimization and steering of Flame Spray Pyrolysis experiments.\end{itemize}
+
+\textbf{Distributed Systems Research Intern}, PyTorch, \emph{Facebook}
+\hfill \textbf{June 2022 --- Sept. 2022}
+\begin{itemize}
+\item Researched automated tensor sharding for distributed training of large models.
+\item Studied DP formulation of inter-node communication (\texttt{alpa}'s) overhead and contributed a $\sim$200x improvement in performance for large tensors.
+\item Used MLIR to explore statically inferring tensor sharding and compute paralellization strategies (based on shape analysis/refinement).
+\end{itemize}
+
+\textbf{Compiler Research Intern}, Torch-MLIR, \emph{nod.ai}
+\hfill \textbf{Feb. 2022 --- June 2022, Sept. 2022 --- Present}
+\begin{itemize}
+\item Currently building an end-to-end compiler for PyTorch models (through Torch-MLIR) which functions independently of PyTorch (\href{https://github.com/nod-ai/PI}{https://github.com/nod-ai/PI}).
+\item Built out first implementation of eager-mode for Torch-MLIR using \texttt{torch\_dispatch} and JITing techniques.
+\item Implemented various new ``ops'' and infrastructure (including, extending C bindings).
+\end{itemize}
 
 \textbf{Compiler Research Intern}, PyTorch, \emph{Facebook}
 \hfill \textbf{June 2021 --- Feb. 2022}
@@ -165,16 +181,22 @@ Coursework & \textit{Computer Science}: Quantum Computing, Deep Learning Systems
 
 
 \begin{hangingpar}
-\textbf{Levental M.}, Chard R., Chard K., Foster I., Wildenberg G.,
-\textit{Ultrafast Focus Detection for Automated Microscopy} 
-\textbf{Submitted} to International Conference on Computational Science (ICCS '22).
+\textbf{Levental M.}, Khan A., Chard R., Yoshi K., Chard K., Foster I.,
+\textit{OpenHLS: High-Level Synthesis for Low-Latency Deep Neural Networks for Experimental Science} 
+\textbf{Submitted}.
 \end{hangingpar}
 
 \begin{hangingpar}
-\textbf{Levental M.}, Bao B., Chard K., Foster I.,
-\textit{MemoMalloc: Memory Planning for Deep Neural Networks.} 
-\textbf{Submitted} to 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI '22).
+\textbf{Levental M.}, Chard R., Chard K., Foster I., Wildenberg G.,
+\textit{Ultrafast Focus Detection for Automated Microscopy} 
+eScience IEEE 17th International Conference on eScience (2021).
 \end{hangingpar}
+
+% \begin{hangingpar}
+% \textbf{Levental M.}, Bao B., Chard K., Foster I.,
+% \textit{MemoMalloc: Memory Planning for Deep Neural Networks.} 
+% \textbf{Submitted} to 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI '22).
+% \end{hangingpar}
 
 \begin{hangingpar}
 Huerta E., Khan A., Huang X., Tian M., \textbf{Levental M.}, Chard R., Wei W., Heflin M., Katz D., Kindratenko V., Mu D., Blaiszik B., Foster I.,
