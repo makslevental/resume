@@ -64,23 +64,8 @@
 
 \section{\mysectionstyle{INTERESTS}}
 
-I'm interested in using, improving, and designing application-specific hardware accelerators for Deep Neural Networks (DNNs), for science applications. 
+I'm interested in using, improving, and designing application-specific hardware accelerators for Deep Neural Networks (DNNs), for production applications.
 Specifically, using compiler techniques such as symbolic execution, and mathematical optimization techniques such as integer programming, to improve memory consumption and inference latencies of DNNs on GPUs, FPGAs, and ASICs. 
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{\mysectionstyle{EDUCATION}}
-
-\textbf{Ph.D.}, \textbf{Computer Science}, \emph{University of Chicago}, GPA: 4.0
-\hfill \textbf{Oct. 2020 --- Apr. 2024}
-
-\textbf{M.S.}, \textbf{Computer Science}, \emph{University of Florida}, GPA: 3.7
-\hfill \textbf{Aug. 2014 --- Dec. 2015}
-
-\textbf{B.S.}, \textbf{Pure Math}, \textbf{Honors}, \emph{Florida State University}, GPA: 3.7
-\hfill \textbf{Aug. 2007 --- Dec. 2010}
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE SECTION
@@ -91,11 +76,22 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 \textbf{Senior Member of Technical Staff}, \emph{AMD}
 \hfill \textbf{May 2024 --- Present}
 \begin{itemize}
-\item IREE implementation for AI Engines; wrote/owned the entire runtime (HAL and kernel module interface).
-\item Triton codegen for AMDGPU.
+\item Triton codegen for AMDGPU (for Instinct/CDNA platform);
+    \begin{itemize}
+      \item[-]{\small Implemented/owned Scalar Evolution for \texttt{tt} and \texttt{ttg} dialect operations, including inference through loops and conditionals;}
+      \item[-]{\small Implemented emitting atomics (\texttt{store}, \texttt{load}, and \texttt{CAS}) via emitting LLVM directly to support ByteDance requirements;}
+      \item[-]{\small Currently implementing improved scheduling of MFMA, local-data-share reads and writes using alternative scheduling models;}
+    \end{itemize}
+\item IREE implementation for AI Engines;
+    \begin{itemize}
+      \item[-]{\small Implemented/owned the entire runtime, including IREE's HAL layer and two distinct connections to kernel driver (first HSA and then thin/lean shim);}
+      \item[-]{\small Deprecated/re-implemented/vendored entire lower-level command packet compiler (\texttt{mlir-aie}), thereby enormously reducing build, deploy, and runtime complexity;}
+      \item[-]{\small Implemented/owned Windows platform build, deploy, CI, including testing, packaging, performance measurements;}
+      \item[-]{\small Managed/maintained cross-platform CI (Mac/Linux/Windows) testing, packaging, performance measurements.}
+    \end{itemize}
 \end{itemize}
 
-\textbf{Compiler Research Intern}, \emph{AMD}
+\textbf{Compiler Research Co-op}, \emph{AMD}
 \hfill \textbf{June 2023 --- May 2024}
 \begin{itemize}
 \item eDSL design for tiled, spatial, architecture with programmable data movement (AI Engine).
@@ -160,6 +156,21 @@ Specifically, using compiler techniques such as symbolic execution, and mathemat
 % \item Taught IT classes to students and teachers on standard software suites (Office, Creative Suite, etc.). Worked on initiative to bring WiFi to the school campus.
 % \item Taught classes on life skills, science at girls (GLOW) and boys (BUILD) empowerment camps.
 % \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\mysectionstyle{EDUCATION}}
+
+\textbf{Ph.D.}, \textbf{Computer Science}, \emph{University of Chicago}, GPA: 4.0
+\hfill \textbf{Oct. 2020 --- Apr. 2024}
+
+\textbf{M.S.}, \textbf{Computer Science}, \emph{University of Florida}, GPA: 3.7
+\hfill \textbf{Aug. 2014 --- Dec. 2015}
+
+\textbf{B.S.}, \textbf{Pure Math}, \textbf{Honors}, \emph{Florida State University}, GPA: 3.7
+\hfill \textbf{Aug. 2007 --- Dec. 2010}
 
 %----------------------------------------------------------------------------------------
 % TECHINICAL STRENGTHS	
@@ -240,31 +251,31 @@ Wilson J., Toska F., \textbf{Levental M.}, Dobbins P.,
 Artificial Intelligence and Machine Learning in Defense Applications (2019).
 \end{hangingpar}
 
-\section{\mysectionstyle{TECHNICAL REPORTS}}
-
-\begin{hangingpar}
-\textbf{Levental M.},
-\textit{PhD Thesis: An End-to-End Programming Model for AI Engine Architectures}
-\href{https://knowledge.uchicago.edu/record/12382}{uchicago.edu} (2024).
-\end{hangingpar}
-
-\begin{hangingpar}
-\textbf{Levental M.},
-\textit{MS Thesis: Memory Planning for Deep Neural Networks} 
-\href{https://arxiv.org/submit/4178464/view}{arXiv:4178464} (2022).
-\end{hangingpar}
-
-\begin{hangingpar}
-\textbf{Levental M.},
-\textit{Tensor Networks for Simulating Quantum Circuits on FPGAs.} 
-\href{https://arxiv.org/abs/2108.06831}{arXiv:2108.06831} (2021).
-\end{hangingpar}
-
-\begin{hangingpar}
-\textbf{Levental M.}, Orlova E.
-\textit{Comparing the Costs of Abstraction for DL Frameworks.} 
-\href{https://arxiv.org/abs/2012.07163}{arXiv:2012.07163} (2020).
-\end{hangingpar}
+% \section{\mysectionstyle{TECHNICAL REPORTS}}
+%
+% \begin{hangingpar}
+% \textbf{Levental M.},
+% \textit{PhD Thesis: An End-to-End Programming Model for AI Engine Architectures}
+% \href{https://knowledge.uchicago.edu/record/12382}{uchicago.edu} (2024).
+% \end{hangingpar}
+%
+% \begin{hangingpar}
+% \textbf{Levental M.},
+% \textit{MS Thesis: Memory Planning for Deep Neural Networks}
+% \href{https://arxiv.org/submit/4178464/view}{arXiv:4178464} (2022).
+% \end{hangingpar}
+%
+% \begin{hangingpar}
+% \textbf{Levental M.},
+% \textit{Tensor Networks for Simulating Quantum Circuits on FPGAs.}
+% \href{https://arxiv.org/abs/2108.06831}{arXiv:2108.06831} (2021).
+% \end{hangingpar}
+%
+% \begin{hangingpar}
+% \textbf{Levental M.}, Orlova E.
+% \textit{Comparing the Costs of Abstraction for DL Frameworks.}
+% \href{https://arxiv.org/abs/2012.07163}{arXiv:2012.07163} (2020).
+% \end{hangingpar}
 
 %\begin{hangingpar}
 %Zhang, Z., Huang, Lei., \textbf{Pauloski, J. G.}, Foster, I. T. (2019, November).

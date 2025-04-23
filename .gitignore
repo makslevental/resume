@@ -5,3 +5,4 @@ Archieve/
 *.synctex.gz
 *.log
 *.aux
+*.out
